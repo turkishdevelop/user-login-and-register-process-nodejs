@@ -17,7 +17,7 @@ const port = process.env.PORT;
 const userRouter = require('./routers/user');
 
 
-/*db dosyasını dahil ettik.*/
+/*database' connect yaparak projede etkin hale gelmesini sağladık.*/
 require('./db/db');
 
 /*express işlemlerini yönetmek için app değişkenine atadık.*/

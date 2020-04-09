@@ -83,7 +83,7 @@ userSchema.methods.generateAuthToken = async function () {
 
     /*token kullanıcıya mongodb veritabanında eklenir.*/
     await user.save();
-    
+
     /*oluşturulan token geri dönderilir.*/
     return token;
 };
