@@ -5,4 +5,11 @@ mongoose.connect(process.env.DB_HOST, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true,
-});
+}).then(
+    () => {
+        console.log('Connected Database')
+    },
+    err => {
+        console.log('Error : '+err.message);
+    }
+);
