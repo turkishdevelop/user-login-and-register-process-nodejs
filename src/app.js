@@ -1,0 +1,1 @@
+/*Uygulamanın yönetileceği business katmanı*/

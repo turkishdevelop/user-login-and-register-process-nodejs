@@ -1,3 +1,4 @@
+/*Kullanıcının modellendiği Model Katmanı*/
 /*Mongoose modülünü import ediyoruz.*/
 const mongoose = require('mongoose');
 /*Mongoose Schema yı User değişkenine aktarıyoruz.*/

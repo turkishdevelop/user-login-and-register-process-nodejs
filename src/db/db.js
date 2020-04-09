@@ -1,0 +1,1 @@
+/*Veritabanı işlemlerini yapacağımız ORM katmanı.*/
