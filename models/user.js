@@ -11,5 +11,5 @@ const user = new User({
     password:{type:String}
 
 });
-/*Hazırladığımız kullanıcı modülünü kullanmak için export ediyoruz*/
+/*Hazırladığımız kullanıcı modülünü kullanmak için export ediyoruz */
 module.exports=mongoose.model("User",user);
