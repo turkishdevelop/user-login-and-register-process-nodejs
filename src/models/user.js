@@ -80,6 +80,12 @@ userSchema.methods.generateAuthToken = async function () {
     /*concat() metodu eklendigi dizi ile parametre olarak aldığı dizi(leri) birleştirerek yeni bir dizi döndürür.*/
     /*user nesnesine concat metot ile token eklediğimiz metot*/
     user.tokens = user.tokens.concat({token});
+
+    /*token kullanıcıya mongodb veritabanında eklenir.*/
+    await user.save();
+    
+    /*oluşturulan token geri dönderilir.*/
+    return token;
 };
 
 userSchema.statics.findByCredentials=async (email,password)=>{
@@ -101,4 +107,5 @@ userSchema.statics.findByCredentials=async (email,password)=>{
 };
 
 const User = mongoose.model("User",userSchema);
+/*User nesnesini router içerisinde kullanabilmek için export ediyorum.*/
 module.exports = User;

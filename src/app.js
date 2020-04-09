@@ -16,6 +16,7 @@ const port = process.env.PORT;
 /*User işlemlerinin yönlendirileceği router dosyasını dahil ettik*/
 const userRouter = require('./routers/user');
 
+
 /*db dosyasını dahil ettik.*/
 require('./db/db');
 

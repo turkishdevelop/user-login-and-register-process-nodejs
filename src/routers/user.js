@@ -2,7 +2,7 @@
 const express = require('express');
 /*User modeli router işlemlerinde kullanacağımız veri gönderip veri alacağımız için import ediyorum.*/
 const User = require('../models/user');
-
+const auth = require('../middleware/auth');
 /*express modülünün router paramatresini router nesnesine atıyoruz.*/
 const  router = express.Router();
 
@@ -45,4 +45,11 @@ router.post('/login',async (request,response)=>{
     }
 
 });
+
+
+router.get('/users/me', auth, async(request, response) => {
+    // View logged in user profile
+    response.send(request.user)
+});
+/*app.js içerisinde router nesnesine erişebilmek için export ederek açıyoruz.*/
 module.exports = router;
